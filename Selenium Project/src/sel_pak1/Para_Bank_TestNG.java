@@ -71,6 +71,7 @@ public class Para_Bank_TestNG {
       driver.findElement(By.cssSelector("input[name=username]")).sendKeys("nirajjagtap");
       driver.findElement(By.xpath("//input[@name=\"password\"]")).click();
       driver.findElement(By.xpath("//input[@name=\"password\"]")).sendKeys("Jd@12345");
+      Thread.sleep(3000);
       driver.findElement(By.xpath("//input[@value=\"Log In\"]")).click();
       Thread.sleep(3000);
       
@@ -129,8 +130,7 @@ public class Para_Bank_TestNG {
 
   @BeforeSuite
   public void beforeSuite() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Niraj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-      WebDriver driver= new ChromeDriver();
+      System.setProperty("webdriver.chrome.driver", "C:\\Users\\Niraj\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
       driver.get("https://parabank.parasoft.com/parabank/register.htm");
       driver.manage().window().maximize();
   }
